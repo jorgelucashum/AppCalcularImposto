@@ -12,7 +12,7 @@ namespace AppCalcularImposto
     {
         static void Main(string[] args)
         {
-            List<Account> accounts = new List<Account>();
+            List<Account> accounts = new List<Account>(); // Instanciando lista vazia.
 
             Console.WriteLine("Digite a quantidade de pessoas que deseja saber o valor que foi pago em impostos no ano: ");
             int n = int.Parse(Console.ReadLine());
@@ -27,13 +27,13 @@ namespace AppCalcularImposto
                 Console.Write("Gasto anual: ");
                 double annualIncome = double.Parse(Console.ReadLine());
 
-                if (ch == 'f') // Adicionanado uma lista do tipo 'IndividualAccount'.
+                if (ch == 'f') // Adicionando uma lista do tipo 'IndividualAccount'.
                 {
                     Console.Write("Gasto com saúde: ");
                     double healthExpenditures = double.Parse(Console.ReadLine());
                     accounts.Add(new IndividualAccount(name, annualIncome, healthExpenditures));
                 }
-                else if (ch == 'j') // Adicionanado uma lista do tipo 'CompanyAccount'.
+                else if (ch == 'j') // Adicionando uma lista do tipo 'CompanyAccount'.
                 {
                     Console.Write("Quantidade de funcionários: ");
                     int employeeNumber = int.Parse(Console.ReadLine());
